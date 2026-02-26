@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yoken-kun"
+version = "0.1.0"
+description = "対話ベースの要件定義ツール。曖昧なアイデアからAI-README.mdを生成し、repo-readme-stage2に繋げる。"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "shimatoshi"}]
+dependencies = [
+    "click>=8.0",
+    "google-genai>=1.0",
+]
+
+[project.scripts]
+yoken-kun = "yoken_kun.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
